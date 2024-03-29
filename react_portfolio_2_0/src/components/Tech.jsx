@@ -7,7 +7,7 @@ const Tech = () => {
   const { isMobile } = useContextProvider()
   return (
     <div
-      className={`hidden flex flex-row flex-wrap justify-center gap-10 ${
+      className={`flex flex-row flex-wrap justify-center gap-10 ${
         isMobile && 'hidden'
       }`}
     >

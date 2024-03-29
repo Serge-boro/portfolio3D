@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
@@ -10,13 +9,12 @@ const Hero = () => {
     <section className='relative w-full h-screen mx-auto '>
       <img
         src='https://img1.picmix.com/output/stamp/normal/3/9/6/7/2387693_e8061.gif'
-        className=' absolute w-[200px] h-[200px] mt-52 ml-28'
+        className={`${
+          isMobile
+            ? 'absolute w-[100px] h-[100px] mt-[330px] ml-[50px]'
+            : 'absolute w-[200px] h-[200px] mt-52 ml-28'
+        }`}
       />
-
-      {/* <img
-        src='https://miro.medium.com/v2/resize:fit:1280/1*DkSIJYfaEKk5lB-K7h_OSQ.gif'
-        className=' absolute w-[200px] h-[200px] mt-52 ml-28'
-      /> */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
       >
@@ -29,8 +27,8 @@ const Hero = () => {
             Hi I'm <span className='text-[#915eff]'>Serhii</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interface and web application
+            I develop user interface <br className='sm:block hidden' />
+            and web application
           </p>
         </div>
       </div>
@@ -46,7 +44,7 @@ const Hero = () => {
         className={`absolute xs:bottom-12 bottom-35 w-full flex justify-center items-center ${
           isMobile && 'relative bottom-60'
         }`}
-        onClick={rotation && rotationMain}
+        onClick={!isMobile && rotationMain}
       >
         <a href='#about'>
           <div

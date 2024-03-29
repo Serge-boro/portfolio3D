@@ -22,7 +22,7 @@ const Computers = ({ isMobile, rotation }) => {
         castShadow
         shadow-mapSize={1024}
       />
-      {rotation ? (
+      {rotation && !isMobile ? (
         <primitive
           object={computer.scene}
           scale={isMobile ? 0.3 : 0.75}
@@ -33,7 +33,7 @@ const Computers = ({ isMobile, rotation }) => {
         <primitive
           object={computer.scene}
           scale={isMobile ? 0.3 : 0.75}
-          position={isMobile ? [0, -1.5, -0.6] : [0, -2.2, -1.5]}
+          position={isMobile ? [0, -2, -0.6] : [0, -2.2, -1.5]}
           rotation={[-0.01, 0.4, -0.1]}
         />
       )}
