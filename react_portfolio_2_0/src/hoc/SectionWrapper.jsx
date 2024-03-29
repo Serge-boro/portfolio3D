@@ -17,7 +17,9 @@ const SectionWrapper = (Component, idName) =>
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >
         <span
-          className={`hash-span ${isMobile && 'hash-span-mobile'}`}
+          className={`hash-span absolute mt-[50px] ${
+            isMobile && 'hash-span-mobile'
+          }`}
           id={idName}
         ></span>
         <Component />

@@ -5,8 +5,10 @@ import { styles } from '../styles'
 import { navLinks } from '../constants'
 
 import { logo, menu, close } from '../assets'
+import { useContextProvider } from '../useContext/UseContext'
 
 const Navbar = () => {
+  const { rotationMain } = useContextProvider()
   const [activeTitle, setActiveTitle] = useState('')
   const [toggle, setToggle] = useState(false)
 
@@ -36,7 +38,9 @@ const Navbar = () => {
               className={`${
                 activeTitle === link.title ? 'text-white' : 'text-secondary'
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActiveTitle(link.title)}
+              onClick={() => {
+                setActiveTitle(link.title), rotationMain()
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>

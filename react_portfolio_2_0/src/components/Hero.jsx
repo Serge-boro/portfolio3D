@@ -5,9 +5,9 @@ import { ComputersCanvas } from './canvas'
 import { useContextProvider } from '../useContext/UseContext'
 
 const Hero = () => {
-  const { isMobile, setIsMobile } = useContextProvider()
+  const { isMobile, setIsMobile, rotation, rotationMain } = useContextProvider()
   return (
-    <section className='relative w-full h-screen mx-auto'>
+    <section className='relative w-full h-screen mx-auto '>
       <img
         src='https://img1.picmix.com/output/stamp/normal/3/9/6/7/2387693_e8061.gif'
         className=' absolute w-[200px] h-[200px] mt-52 ml-28'
@@ -35,13 +35,18 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas isMobile={isMobile} setIsMobile={setIsMobile} />
+      <ComputersCanvas
+        isMobile={isMobile}
+        setIsMobile={setIsMobile}
+        rotation={rotation}
+      />
 
       {/* oval after computer */}
       <div
         className={`absolute xs:bottom-12 bottom-35 w-full flex justify-center items-center ${
           isMobile && 'relative bottom-60'
         }`}
+        onClick={rotation && rotationMain}
       >
         <a href='#about'>
           <div

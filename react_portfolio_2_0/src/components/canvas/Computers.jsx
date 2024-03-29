@@ -4,9 +4,11 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
+import { useContextProvider } from '../../useContext/UseContext'
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, rotation }) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
+  console.log(rotation)
 
   return (
     <mesh>
@@ -20,17 +22,26 @@ const Computers = ({ isMobile }) => {
         castShadow
         shadow-mapSize={1024}
       />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.3 : 0.75}
-        position={isMobile ? [0, -1.5, -0.6] : [0, -2.2, -1.5]}
-        rotation={[-0.01, 0.4, -0.1]}
-      />
+      {rotation ? (
+        <primitive
+          object={computer.scene}
+          scale={isMobile ? 0.3 : 0.75}
+          position={isMobile ? [0, -3, -2.2] : [0, -3.5, -1.5]}
+          rotation={[-0.01, -0.22, -0.1]}
+        />
+      ) : (
+        <primitive
+          object={computer.scene}
+          scale={isMobile ? 0.3 : 0.75}
+          position={isMobile ? [0, -1.5, -0.6] : [0, -2.2, -1.5]}
+          rotation={[-0.01, 0.4, -0.1]}
+        />
+      )}
     </mesh>
   )
 }
 
-const ComputerCanvas = ({ isMobile, setIsMobile }) => {
+const ComputerCanvas = ({ isMobile, setIsMobile, rotation }) => {
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 500px)')
 
@@ -61,7 +72,7 @@ const ComputerCanvas = ({ isMobile, setIsMobile }) => {
           maxPolarAngle={Math.PI / 3}
           minPolarAngle={Math.PI / 3}
         />
-        <Computers isMobile={isMobile} />
+        <Computers isMobile={isMobile} rotation={rotation} />
       </Suspense>
       <Preload all />
     </Canvas>
