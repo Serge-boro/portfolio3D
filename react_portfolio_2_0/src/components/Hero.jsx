@@ -2,11 +2,21 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
+import { useContextProvider } from '../useContext/UseContext'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const { isMobile, setIsMobile } = useContextProvider()
   return (
     <section className='relative w-full h-screen mx-auto'>
+      <img
+        src='https://img1.picmix.com/output/stamp/normal/3/9/6/7/2387693_e8061.gif'
+        className=' absolute w-[200px] h-[200px] mt-52 ml-28'
+      />
+
+      {/* <img
+        src='https://miro.medium.com/v2/resize:fit:1280/1*DkSIJYfaEKk5lB-K7h_OSQ.gif'
+        className=' absolute w-[200px] h-[200px] mt-52 ml-28'
+      /> */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
       >
@@ -39,7 +49,7 @@ const Hero = () => {
               ${isMobile && 'w-[24px] h-[38px] border-2'}`}
           >
             {/* inside pong */}
-            <motion.dev
+            <motion.nav
               animate={isMobile ? { y: [0, 10, 0] } : { y: [0, 25, 0] }}
               transition={{
                 duration: 1.5,

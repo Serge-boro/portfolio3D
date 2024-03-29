@@ -14,3 +14,15 @@ https://logo.com/
 https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
 
 https://sketchfab.com/3d-models?date=week&features=downloadable&sort_by=-likeCount
+
+https://dashboard.render.com/
+
+https://dashboard.emailjs.com/admin/account
+
+<!-- --legacy-peer-deps -->
+
+
+https://img1.picmix.com/output/stamp/normal/3/9/6/7/2387693_e8061.gif
+
+https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/software-development-specialist.jpg?itok=D8qgVwxb
+

@@ -1,0 +1,11 @@
+Model Information:
+* title:	L-P Shark Cage Diving Scene
+* source:	https://sketchfab.com/3d-models/l-p-shark-cage-diving-scene-5bf4fcbbc6ea40b69c734f54180fa38c
+* author:	EdwinRC (https://sketchfab.com/Edwin3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "L-P Shark Cage Diving Scene" (https://sketchfab.com/3d-models/l-p-shark-cage-diving-scene-5bf4fcbbc6ea40b69c734f54180fa38c) by EdwinRC (https://sketchfab.com/Edwin3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
