@@ -4,7 +4,11 @@ import { ComputersCanvas } from './canvas'
 import { useContextProvider } from '../useContext/UseContext'
 
 const Hero = () => {
-  const { isMobile, setIsMobile, rotation, rotationMain } = useContextProvider()
+  const { isMobile, setIsMobile, rotation, rotationMain, checkMobile } =
+    useContextProvider()
+
+  
+
   return (
     <section className='relative w-full h-screen mx-auto '>
       <img

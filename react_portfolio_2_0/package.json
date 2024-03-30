@@ -19,7 +19,8 @@
     "react-router-dom": "^6.22.3",
     "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.149.0"
+    "three": "^0.149.0",
+    "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
