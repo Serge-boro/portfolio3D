@@ -11,7 +11,7 @@ import { footers } from '../constants'
 import Footer from './Footer'
 
 const Contact = () => {
-  const { isMobile } = useContextProvider()
+  const { isMobile, checkMobile } = useContextProvider()
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -132,12 +132,14 @@ const Contact = () => {
         </form>
       </motion.span>
 
-      <motion.span
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className='absolute h-full w-full z-[-1]'
-      >
-        <EarthCanvas />
-      </motion.span>
+      {!isMobile && !checkMobile && (
+        <motion.span
+          variants={slideIn('right', 'tween', 0.2, 1)}
+          className='absolute h-full w-full z-[-1]'
+        >
+          <EarthCanvas />
+        </motion.span>
+      )}
     </div>
   )
 }

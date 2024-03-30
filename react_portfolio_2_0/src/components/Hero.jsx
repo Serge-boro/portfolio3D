@@ -7,15 +7,13 @@ const Hero = () => {
   const { isMobile, setIsMobile, rotation, rotationMain, checkMobile } =
     useContextProvider()
 
-  
-
   return (
     <section className='relative w-full h-screen mx-auto '>
       <img
         src='https://img1.picmix.com/output/stamp/normal/3/9/6/7/2387693_e8061.gif'
         className={`${
           isMobile
-            ? 'absolute w-[100px] h-[100px] mt-[330px] ml-[50px]'
+            ? 'absolute w-[100px] h-[100px] mt-[330px] ml-[50px] z-[2]'
             : 'absolute w-[200px] h-[200px] mt-52 ml-28'
         }`}
       />
@@ -41,12 +39,13 @@ const Hero = () => {
         isMobile={isMobile}
         setIsMobile={setIsMobile}
         rotation={rotation}
+        checkMobile={checkMobile}
       />
 
       {/* oval after computer */}
       <div
         className={`absolute xs:bottom-12 bottom-35 w-full flex justify-center items-center ${
-          isMobile && 'relative bottom-60'
+          isMobile && 'bottom-40'
         }`}
         onClick={!isMobile && rotationMain}
       >

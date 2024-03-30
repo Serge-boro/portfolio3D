@@ -11,7 +11,7 @@ const Footer = () => {
         className={`${isMobile ? 'flex' : 'flex justify-between w-[350px]'}`}
       >
         {footers.map((tech, idx) => (
-          <div className={`w-16 h-16 ${isMobile && 'w-12 h-12'}`} key={idx}>
+          <div className={`w-16 h-16 ${isMobile && 'w-9 h-9 ml-5'}`} key={idx}>
             <BallCanvas {...tech} />
           </div>
         ))}
