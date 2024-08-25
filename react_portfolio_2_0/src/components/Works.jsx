@@ -37,7 +37,7 @@ const ProjectCard = ({
                 onClick={() => window.open(source_code_link, '_blank')}
               >
                 <img
-                  src='https://static-00.iconduck.com/assets.00/logo-github-icon-256x256-6fb8e1xp.png'
+                  src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png'
                   alt='github'
                   className='w-10 h-10 rounded-full object-cover bg-white'
                 />

@@ -69,7 +69,7 @@ const footers = [
   },
   {
     name: 'GitHub',
-    icon: 'https://static-00.iconduck.com/assets.00/logo-github-icon-256x256-6fb8e1xp.png',
+    icon: 'https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png',
     link: 'https://github.com/Serge-boro',
   },
   {
